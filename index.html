@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Copy of Research_Cell_Logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <div class="task-form">
+            <h2>Create Task</h2>
+            <form id="taskForm">
+                <input type="text" id="description" placeholder="Task Description" required>
+                <input type="date" id="dueDate" required>
+                <select id="priority" required>
+                    <option value="" disabled selected>Priority Level</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+        <div class="task-controls">
+            <button id="sortDueDate">Sort by Due Date</button>
+            <button id="sortPriority">Sort by Priority</button>
+            <button id="filterPending">Show Pending</button>
+            <button id="filterCompleted">Show Completed</button>
+        </div>
+        <div class="task-list">
+            <h2>Task List</h2>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
